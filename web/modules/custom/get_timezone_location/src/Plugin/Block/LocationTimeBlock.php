@@ -57,9 +57,17 @@ class LocationTimeBlock extends BlockBase implements ContainerFactoryPluginInter
      * {@inheritdoc}
     */
     public function build() {
+        //Getting data from config
         $city = \Drupal::config('get_timezone_location.set_configuration_form')->get('city');
+        $country = \Drupal::config('get_timezone_location.set_configuration_form')->get('country');
         return [
-            '#markup' => '<h1>Hi '.$this->timezone->getCurrentTime().' and city '.$city.' </h1>',
+            '#theme' => 'block__timezone_block', //Call this theme to render
+            '#date_time' => $this->timezone->getCurrentTime(),
+            '#city' => $city,
+            '#country' => $country,
+            '#cache' => [
+                'max-age' => 60 * 60 * 24,
+            ],
         ];
     }
 

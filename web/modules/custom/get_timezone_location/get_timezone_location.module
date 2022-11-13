@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function get_timezone_location_theme($existing, $type, $theme, $path) {
+    return array(
+     'block__timezone_block' => array(
+            'template' => 'block--timezone-block',
+            'variables' => array('date_time' => NULL, 'city' => NULL, 'country' => NULL),
+            'path' => $path . '/templates/block',
+        ),
+    );
+}
