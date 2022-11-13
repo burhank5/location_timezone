@@ -100,7 +100,7 @@ class TimezoneFormConfig extends ConfigFormBase {
       ->save();
     parent::submitForm($form, $form_state);
 
-    $this->messenger()->addStatus($this->t('The configration is saved successfully.'));
+    $this->messenger()->addStatus($this->t('The configuration is saved successfully.'));
   }
 
 }
