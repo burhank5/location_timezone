@@ -62,6 +62,7 @@ class TimezoneFormConfig extends ConfigFormBase {
       '#description' => $this->t('Enter your Country'),
       '#default_value' => $config->get('country'),
       '#title' => $this->t('Enter your Country'),
+      '#required' => TRUE,
     ];
 
     $form['city'] = [
@@ -69,6 +70,7 @@ class TimezoneFormConfig extends ConfigFormBase {
         '#description' => $this->t('Enter your City'),
         '#default_value' => $config->get('city'),
         '#title' => $this->t('Enter your City'),
+        '#required' => TRUE,
     ];
 
     $form['timezone'] = [
@@ -77,6 +79,7 @@ class TimezoneFormConfig extends ConfigFormBase {
         '#options' => array('select' => t('--- SELECT ---'), 'America/Chicago' => t('America/Chicago'), 'America/New_York' => t('America/New_York'), 'Asia/Tokyo' => t('Asia/Tokyo'), 'Asia/Dubai' => t('Asia/Dubai'), 'Asia/Kolkata' => t('Asia/Kolkata'), 'Europe/Amsterdam' => t('Europe/Amsterdam'), 'Europe/Oslo' => t('Europe/Oslo'), 'Europe/London' => t('Europe/London')),
         '#default_value' => $config->get('timezone'),
         '#title' => $this->t('Select your Timezone'),
+        '#required' => TRUE,
     ];
     return parent::buildForm($form, $form_state);
   }
