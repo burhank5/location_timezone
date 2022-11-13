@@ -1,3 +1,5 @@
 services:
   get_timezone_location.current_time_service:
     class: 'Drupal\get_timezone_location\Service\CurrentTimeService'
+    arguments:
+      - '@config.factory'

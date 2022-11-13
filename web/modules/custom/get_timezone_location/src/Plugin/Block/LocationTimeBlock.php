@@ -5,8 +5,10 @@ namespace Drupal\get_timezone_location\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\get_timezone_location\Service\CurrentTimeService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Config\ConfigFactory;
 
 
 /**
@@ -49,7 +51,7 @@ class LocationTimeBlock extends BlockBase implements ContainerFactoryPluginInter
             $configuration,
             $plugin_id,
             $plugin_definition,
-            $container->get('get_timezone_location.current_time_service')
+            $container->get('get_timezone_location.current_time_service'),
         );
     }
 
