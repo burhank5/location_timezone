@@ -1,0 +1,5 @@
+name: Timezone and Location
+type: module
+description: 'Gets the time and date according to the user timezone'
+core_version_requirement: ^8.8 || ^9
+package: 'Custom'

@@ -1,0 +1,7 @@
+get_timezone_location.set_configuration:
+  path: '/admin/set-configuration'
+  defaults:
+    _form: '\Drupal\get_timezone_location\Form\TimezoneFormConfig'
+    _title: 'Set city and timezone'
+  requirements: 
+    _permission: 'administer users'
